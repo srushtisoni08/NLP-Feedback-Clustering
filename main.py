@@ -9,7 +9,10 @@ from src.evaluation import evaluate_clustering
 from src.visualization import (
     plot_k_evaluation,
     plot_umap_clusters,
-    plot_theme_distribution
+    plot_theme_distribution,
+    plot_eda_text_length,
+    plot_eda_sentiment_distribution,
+    plot_cluster_sentiment_crosstab
 )
 
 
@@ -24,7 +27,7 @@ def main():
     os.makedirs("results/figures", exist_ok=True)
 
     # ============================================================
-    # 1. LOAD DATASET
+    # 1. LOAD DATASET & EDA
     # ============================================================
     raw_data_path = "data/raw/Student_Feedback.csv"
     print(f"\n[1] Loading dataset from: {raw_data_path}")
@@ -33,6 +36,9 @@ def main():
     print(f"    - Raw Dataset Shape: {df_raw.shape}")
     print(f"    - Raw Columns: {df_raw.columns.tolist()}")
 
+    # Generate EDA Sentiment Distribution graph
+    plot_eda_sentiment_distribution(df_raw, save_path="results/figures/eda_sentiment_distribution.png")
+
     # ============================================================
     # 2. PREPROCESSING & CLEANING
     # ============================================================
@@ -40,9 +46,17 @@ def main():
     df = preprocess_dataframe(df_raw)
     
     print(f"    - Preprocessed Dataset Shape: {df.shape}")
-    print("    - Sentiments column explicitly excluded: True")
+    print("    - Sentiments column explicitly excluded for unsupervised modeling: True")
     print(f"    - Mean Word Count: {df['word_count'].mean():.2f} words/comment")
     print(f"    - Mean Character Count: {df['char_count'].mean():.2f} chars/comment")
+
+    # Generate EDA Text Length Distribution graph
+    plot_eda_text_length(df, save_path="results/figures/eda_text_length_distribution.png")
+
+    # Keep a copy with raw sentiment for post-hoc exploratory correlation analysis
+    if "sentiments" in df_raw.columns:
+        df["sentiments"] = df_raw.loc[df.index, "sentiments"] if len(df_raw) == len(df) else df_raw["sentiments"].iloc[:len(df)].values
+
 
     # Save cleaned dataframe
     cleaned_csv_path = "data/processed/cleaned_student_feedback.csv"
@@ -235,10 +249,15 @@ def main():
     theme_df.to_csv(theme_csv_path, index=False)
     print(f"    -> Saved theme keywords summary to: {theme_csv_path}")
 
+    # Generate post-hoc cluster vs sentiment breakdown chart
+    if "sentiments" in df.columns:
+        plot_cluster_sentiment_crosstab(df, cluster_col="cluster_sbert_kmeans", save_path="results/figures/cluster_sentiment_breakdown.png")
+
     # Save final output dataframe with all clusters
     final_data_path = "data/processed/final_student_feedback_clusters.csv"
     df.to_csv(final_data_path, index=False)
     print(f"    -> Saved final dataset with cluster assignments to: {final_data_path}")
+
 
     print("\n" + "=" * 70)
     print("         SUCCESS: ALL DATA & FIGURES SAVED TO RESULTS/ & DATA/")

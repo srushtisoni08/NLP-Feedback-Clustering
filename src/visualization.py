@@ -164,3 +164,97 @@ def plot_theme_distribution(
     plt.savefig(save_path, dpi=300, bbox_inches="tight")
     plt.close()
     print(f"Saved: {save_path}")
+
+
+def plot_eda_text_length(df, save_path="results/figures/eda_text_length_distribution.png"):
+    """
+    Plot EDA graphs for feedback character length and word count distributions.
+    """
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+    # Character count distribution
+    sns.histplot(df["char_count"], kde=True, ax=axes[0], color="teal", bins=30)
+    axes[0].set_title("Distribution of Feedback Character Length", fontweight="bold")
+    axes[0].set_xlabel("Character Count", fontweight="bold")
+    axes[0].set_ylabel("Frequency", fontweight="bold")
+
+    # Word count distribution
+    sns.histplot(df["word_count"], kde=True, ax=axes[1], color="coral", bins=25)
+    axes[1].set_title("Distribution of Feedback Word Count", fontweight="bold")
+    axes[1].set_xlabel("Word Count", fontweight="bold")
+    axes[1].set_ylabel("Frequency", fontweight="bold")
+
+    plt.suptitle("Exploratory Data Analysis: Student Feedback Text Lengths", fontsize=15, fontweight="bold", y=1.02)
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved: {save_path}")
+
+
+def plot_eda_sentiment_distribution(df_raw, save_path="results/figures/eda_sentiment_distribution.png"):
+    """
+    Plot EDA breakdown of raw dataset sentiment column (for dataset profiling).
+    """
+    if "sentiments" not in df_raw.columns:
+        return
+
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    counts = df_raw["sentiments"].value_counts().sort_index()
+
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+    # Bar chart
+    bars = axes[0].bar([str(x) for x in counts.index], counts.values, color=sns.color_palette("deep", len(counts)))
+    axes[0].set_title("Raw Sentiment Class Counts", fontweight="bold")
+    axes[0].set_xlabel("Sentiment Rating Class", fontweight="bold")
+    axes[0].set_ylabel("Count", fontweight="bold")
+    axes[0].grid(axis="y", linestyle="--", alpha=0.7)
+
+    for bar in bars:
+        height = bar.get_height()
+        axes[0].annotate(f"{height}", xy=(bar.get_x() + bar.get_width() / 2, height),
+                         xytext=(0, 3), textcoords="offset points", ha="center", va="bottom", fontweight="bold")
+
+    # Pie chart
+    axes[1].pie(counts.values, labels=[f"Class {x}" for x in counts.index], autopct="%1.1f%%",
+                colors=sns.color_palette("deep", len(counts)), startangle=140, explode=[0.05]*len(counts))
+    axes[1].set_title("Sentiment Class Percentage Breakdown", fontweight="bold")
+
+    plt.suptitle("Exploratory Data Analysis: Raw Dataset Sentiment Distribution", fontsize=15, fontweight="bold", y=1.02)
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved: {save_path}")
+
+
+def plot_cluster_sentiment_crosstab(
+    df,
+    cluster_col="cluster_sbert_kmeans",
+    sentiment_col="sentiments",
+    save_path="results/figures/cluster_sentiment_breakdown.png"
+):
+    """
+    Plot post-hoc cross-tabulation of discovered themes vs sentiment ratings.
+    """
+    if sentiment_col not in df.columns:
+        return
+
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    crosstab = pd.crosstab(df[cluster_col], df[sentiment_col], normalize="index") * 100
+
+    plt.figure(figsize=(11, 6))
+    crosstab.plot(kind="bar", stacked=True, colormap="viridis", figsize=(11, 6))
+    plt.title(f"Post-Hoc Sentiment Breakdown across Discovered Themes ({cluster_col})", fontweight="bold", fontsize=14, pad=12)
+    plt.xlabel("Discovered Theme Cluster ID", fontweight="bold")
+    plt.ylabel("Percentage (%)", fontweight="bold")
+    plt.legend(title="Sentiment Class", bbox_to_anchor=(1.05, 1), loc="upper left")
+    plt.xticks(rotation=0)
+    plt.grid(axis="y", linestyle="--", alpha=0.5)
+
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved: {save_path}")
+
