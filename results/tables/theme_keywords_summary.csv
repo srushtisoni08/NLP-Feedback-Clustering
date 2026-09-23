@@ -1,0 +1,44 @@
+Model,Cluster_ID,Count,Top_Keywords,Sample_Quote
+TF-IDF + K-Means,0,28,"teach, wish, teachers, students, teach teach, sir teach, teachers teach, wish teach",teacheR TEACH related to field
+TF-IDF + K-Means,1,83,"teaching, good, method, teaching method, good teaching, teaching methodology, methodology, teaching style",better teaching methodology
+TF-IDF + K-Means,2,119,"students, students teachers, teachers, burden students, students students, help students, understand, burden",always going the extra mile to help your students succeed.
+TF-IDF + K-Means,3,132,"teachers, work, practical work, practical, lab, work teachers, lab work, properly",TEACHERS HELP US IN CAREER BUILDING
+TF-IDF + K-Means,4,45,"good, good good, teachers good, teacher good, teachers, good thing, teacher, good motivator",Everything is going fine in lab . learning new things. That is good for us
+TF-IDF + K-Means,5,116,"teacher, good teacher, students, students teacher, teacher teacher, good, subject teacher, teacher does",teacher should give us the practical knowledge other than theortical
+TF-IDF + K-Means,6,437,"time, learnt, lectures, student, programming, table, time table, sir",least EXPOSURE to modern trends discussed
+TF-IDF + K-Means,7,45,"subject, knowledge, teachers, subject knowledge, subject teachers, knowledge subject, having, deep",Having no technical knowledge about their taught subject
+TF-IDF + K-Means,8,26,"taught, sir taught, taught taught, sir, didnt, left, taught data, topic taught",mathematics subjects are not taught well
+TF-IDF + K-Means,9,20,"like, teacher like, teacher, got opportunity, like sir, treat like, sir, sir sir",When you entered in the Class you were looking like a strict Professor
+SBERT + K-Means,0,72,"puntual, time table, table, time, biased, rules, gender, behaviour",One should not be biasd on gender basis
+SBERT + K-Means,1,131,"work, lab, knowledge, practical, practical work, subject, topic, labs",Having no technical knowledge about their taught subject
+SBERT + K-Means,2,70,"teaching, methodology, good teaching, teaching methodology, good, method, teaching method, teaching style",better teaching methodology
+SBERT + K-Means,3,96,"lectures, lecture, lecture delivery, time, syllabus, teachers, class, delivery",When you entered in the Class you were looking like a strict Professor
+SBERT + K-Means,4,55,"programming, learnt, computer, computers, html, hardware, fsc, sir",Practical and easy learning
+SBERT + K-Means,5,86,"students, teaches, teacher, lectures, comes, good, teaching, takes",Professor should be free on his teaching styles
+SBERT + K-Means,6,101,"students, student, help students, extra, help, sir, students given, care students",student assessment should be uniform
+SBERT + K-Means,7,101,"sir, allah, thank, bless, allah bless, good, honest, precious",why did not you play cricket with us
+SBERT + K-Means,8,261,"teachers, teacher, students, students teachers, subject, students teacher, subject teachers, student",TEACHERS HELP US IN CAREER BUILDING
+SBERT + K-Means,9,78,"teach, teacher, taught, sir, learnt, excellent teacher, sir taught, teaches",you make learning a truly enjoyable experience.
+SBERT + HDBSCAN,-1,223,"teachers, syllabus, practical, students, teacher, work, practical work, teach",teacher was kind
+SBERT + HDBSCAN,0,57,"programming, learnt, computers, computer, hardware, html, data, basic","you taught us data analysis, that was awesome"
+SBERT + HDBSCAN,1,29,"lab, lab work, labs, work, demo, practical, environment, lab demo",Lab work is properly covered in the labs by the faculty and evaluations help to learn more. 
+SBERT + HDBSCAN,2,86,"lectures, teaching, students, teaches, good, questions, teaching method, method good",Professor should be free on his teaching styles
+SBERT + HDBSCAN,3,18,"faculty, covid, faculty members, members, faculty good, members helping, webinars, technologies",FACULTY DON'T include latest technologies
+SBERT + HDBSCAN,4,64,"teaching, method, teaching methodology, good, methodology, teaching style, teaching method, good teaching",better teaching methodology
+SBERT + HDBSCAN,5,27,"sir, teacher, excellent teacher, good, nice teacher, good teacher, teacher like, alvi",you are my ideal teacher. I learnt a lot of thing from you
+SBERT + HDBSCAN,6,38,"sir, allah, bless, allah bless, like, thank, great, sir sir",I behalf of the whole class I would like to thank you fro your unforgettable and kind services
+SBERT + HDBSCAN,7,50,"sir, taught, teach, learnt, sir taught, lot, high, sir teach",why did not you play cricket with us
+SBERT + HDBSCAN,8,46,"lectures, lecture, lecture delivery, delivery, teachers, lectures teachers, slides, concepts lectures",do not compromise on discipline during lecture time
+SBERT + HDBSCAN,9,25,"time, time table, table, late, class, classes, follow time, class late",the teacher should take class at given time
+SBERT + HDBSCAN,10,31,"teachers, improve, motivate, practical, teach, teacher, improve performance, teachers improve",TEACHERS HELP US IN CAREER BUILDING
+SBERT + HDBSCAN,11,15,"paper, papers, check papers, check, question paper, fair, set, teachers",they take tough papers
+SBERT + HDBSCAN,12,23,"assignments, marked, return, quizes, tests, given, marked assignments, assignments given",class tests and assignments may be given as per schedule not at the end of the semester
+SBERT + HDBSCAN,13,28,"puntual, behaviour, communication, excellent behaviour, good, regular puntual, communication skills, regular","ALL APPRECIATIONS FOR THEM, THEY ARE EXCELLENT"
+SBERT + HDBSCAN,14,25,"girls, biased, gender, equal, teacher, treats, boys girls, teachers discriminate",One should not be biasd on gender basis
+SBERT + HDBSCAN,15,19,"subject, teacher, teachers, subject teacher, know, subject teachers, interesting teachers, subject interesting",mathematics subjects are not taught well
+SBERT + HDBSCAN,16,18,"topics, subject, topic, complex topics, incompleted, complex, leave topics, subject allocation",You have a gift for simplifying complex topics
+SBERT + HDBSCAN,17,19,"knowledge, subject, modern, having, deep knowledge, modern trends, deep, knowledge subject",Having no technical knowledge about their taught subject
+SBERT + HDBSCAN,18,17,"material, knowledge, provided, helpful, material provided, knowledgeable, help, provide",THEY IMPART modern and latest knowledge to us
+SBERT + HDBSCAN,19,104,"teachers, teacher, students, friendly, class, rules, strict, students teachers",even when we asked some irrelevant question teacher gave proper attention to them
+SBERT + HDBSCAN,20,22,"students, teachers, students teacher, students teachers, favoritism, favouritism, teacher, make students",teachers should spare more time to know where his students stannding
+SBERT + HDBSCAN,21,67,"students, problems, burden students, burden, understand, teachers, try, student",always going the extra mile to help your students succeed.

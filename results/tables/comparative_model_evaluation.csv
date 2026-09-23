@@ -1,0 +1,4 @@
+Model,Clusters (K),Silhouette Score,Davies-Bouldin Index,Calinski-Harabasz Score,Intra-Cluster Cosine Sim,Noise Ratio (%)
+Baseline: TF-IDF + K-Means,10,0.0361,4.5002,11.06,0.1681,0.0%
+Improved 1: SBERT + K-Means,10,0.0381,3.4943,27.42,0.3711,0.0%
+Improved 2: SBERT + HDBSCAN,22,0.0447,2.9139,14.10,0.4287,21.2%
