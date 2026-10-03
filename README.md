@@ -448,5 +448,3 @@ This project demonstrates how unsupervised NLP can be used to discover latent th
 The comparison shows that **semantic SBERT embeddings capture the structure of this feedback more effectively than the TF-IDF baseline**. However, the relatively low clustering scores and boundary analysis demonstrate that student feedback is inherently overlapping and cannot always be represented by a single discrete theme.
 
 Therefore, the most useful interpretation of the results is not simply which model produces the highest metric, but how well the resulting clusters correspond to **meaningful and interpretable patterns in real student feedback**.
-
----
