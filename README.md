@@ -43,12 +43,6 @@ automatically on GitHub.
 
 ![Analyze New Feedback](frontend/screenshots/06-analyze-feedback.png)
 
-> **Adding screenshots:** Create the folder `frontend/screenshots/` in
-> the repository. Save each screenshot with the exact filename shown
-> above, then commit and push the images along with this README. Use PNG
-> or JPG files; if you use JPG, update the corresponding image extension
-> in this README.
-
 ------------------------------------------------------------------------
 
 ## Overview
