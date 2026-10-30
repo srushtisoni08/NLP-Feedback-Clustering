@@ -5,14 +5,7 @@ import Themes from "./pages/Themes";
 import Sentiment from "./pages/Sentiment";
 import Models from "./pages/Models";
 import Explorer from "./pages/Explorer";
-import { PageHeader, Card } from "./components/ui";
-
-const Soon = ({ title }) => (
-  <>
-    <PageHeader title={title} />
-    <Card><p className="text-sm text-muted">Coming in the next chunk.</p></Card>
-  </>
-);
+import Analyze from "./pages/Analyze";
 
 export default function App() {
   return (
@@ -23,7 +16,7 @@ export default function App() {
         <Route path="sentiment" element={<Sentiment />} />
         <Route path="models" element={<Models />} />
         <Route path="explorer" element={<Explorer />} />
-        <Route path="analyze" element={<Soon title="Analyze New Feedback" />} />
+        <Route path="analyze" element={<Analyze />} />
       </Route>
     </Routes>
   );
