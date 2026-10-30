@@ -15,10 +15,6 @@ themes, sentiment, model comparisons, and individual feedback comments.
 
 ## Dashboard Preview
 
-The dashboard screenshots below are stored in `frontend/screenshots/`.
-Add your own screenshots using these filenames and they will render
-automatically on GitHub.
-
 ### 1. Overview Dashboard
 
 ![Overview Dashboard](frontend/screenshots/01-overview.png)
