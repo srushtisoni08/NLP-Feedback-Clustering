@@ -1,0 +1,135 @@
+[
+  {
+    "cluster": 3,
+    "name": "Teacher Performance & Student Support",
+    "short": "Student Support",
+    "count": 253,
+    "pct": 23.8,
+    "sentiment": {
+      "positive": 80,
+      "negative": 147,
+      "neutral": 26
+    },
+    "examples": [
+      "teachers burden the students",
+      "teachers should be cooperative with the students",
+      "teachers keep students in fear",
+      "teachers appreciate the students",
+      "teachers get personal with the students"
+    ]
+  },
+  {
+    "cluster": 5,
+    "name": "Classroom Management & Academic Practices",
+    "short": "Classroom Management",
+    "count": 186,
+    "pct": 17.5,
+    "sentiment": {
+      "positive": 78,
+      "negative": 89,
+      "neutral": 19
+    },
+    "examples": [
+      "not friendly towards students",
+      "do not care about the students",
+      "they understand their students needs",
+      "your behaviour with students is very good",
+      "teacher do not take lectures at the given time"
+    ]
+  },
+  {
+    "cluster": 4,
+    "name": "Teacher Behaviour, Fairness & Professional Conduct",
+    "short": "Conduct & Fairness",
+    "count": 172,
+    "pct": 16.18,
+    "sentiment": {
+      "positive": 108,
+      "negative": 43,
+      "neutral": 21
+    },
+    "examples": [
+      "Sir your style is very good",
+      "sir thank you, you treat us like your own",
+      "i will like to say :-) \"sir you are great\"",
+      "we were afraid of you sir",
+      "we are afraid of you sir"
+    ]
+  },
+  {
+    "cluster": 0,
+    "name": "Teaching Methodology & Teaching Style",
+    "short": "Teaching Methodology",
+    "count": 156,
+    "pct": 14.68,
+    "sentiment": {
+      "positive": 114,
+      "negative": 30,
+      "neutral": 12
+    },
+    "examples": [
+      "teaching method is not good",
+      "The method of teaching is very good",
+      "the teaching method was not good",
+      "method of teaching is so good",
+      "sir your method of teaching is so good"
+    ]
+  },
+  {
+    "cluster": 6,
+    "name": "Subject Knowledge & Practical Learning",
+    "short": "Subject Knowledge",
+    "count": 144,
+    "pct": 13.55,
+    "sentiment": {
+      "positive": 58,
+      "negative": 76,
+      "neutral": 10
+    },
+    "examples": [
+      "insist on practical work that provides detail knowledge of theoretical work",
+      "less attention is given towards practical work",
+      "there is gap in practical work",
+      "they give us limited practical work",
+      "they lack in subject knowledge"
+    ]
+  },
+  {
+    "cluster": 2,
+    "name": "Teacher Approach & Interpersonal Qualities",
+    "short": "Interpersonal Approach",
+    "count": 96,
+    "pct": 9.03,
+    "sentiment": {
+      "positive": 70,
+      "negative": 23,
+      "neutral": 3
+    },
+    "examples": [
+      "his teaching method is not good",
+      "his teaching method is very good",
+      "his teaching method is good",
+      "she takes all the lectures on time",
+      "His way of teaching is so good that students dont miss his even a single class and take all lectures"
+    ]
+  },
+  {
+    "cluster": 1,
+    "name": "Technical & Programming Learning",
+    "short": "Technical Learning",
+    "count": 56,
+    "pct": 5.27,
+    "sentiment": {
+      "positive": 41,
+      "negative": 7,
+      "neutral": 8
+    },
+    "examples": [
+      "i learnt about computer hardware and programming",
+      "we learnt about computers and programming in your lectures",
+      "we learnt a lot from you such as programming and about modern computers",
+      "We have learnt many thing espacially programming but I am weak in hardware",
+      "we learnt a lot about comptuers and programming in your lectures sir"
+    ]
+  }
+]

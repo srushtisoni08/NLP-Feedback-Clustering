@@ -1,0 +1,22 @@
+{
+  "rawRows": 1086,
+  "analyzed": 1063,
+  "themes": 7,
+  "largest": "Teacher Performance & Student Support",
+  "largestPct": 23.8,
+  "largestCount": 253,
+  "k7": {
+    "tfidf": 0.0128816518980347,
+    "sbert": 0.0392684713006019
+  },
+  "bestSbert": {
+    "k": 2,
+    "score": 0.0806933119893074
+  },
+  "ari": 0.0710276375032005,
+  "sentiment": {
+    "positive": 549,
+    "negative": 415,
+    "neutral": 99
+  }
+}
