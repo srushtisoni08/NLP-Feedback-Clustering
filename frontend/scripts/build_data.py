@@ -1,6 +1,3 @@
-"""Build frontend JSON from project CSVs.  Run from repo root:
-   python frontend/scripts/build_data.py
-"""
 import json, pandas as pd, numpy as np
 from pathlib import Path
 from sklearn.feature_extraction.text import TfidfVectorizer
