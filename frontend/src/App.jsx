@@ -3,6 +3,8 @@ import Layout from "./components/Layout";
 import Overview from "./pages/Overview";
 import Themes from "./pages/Themes";
 import Sentiment from "./pages/Sentiment";
+import Models from "./pages/Models";
+import Explorer from "./pages/Explorer";
 import { PageHeader, Card } from "./components/ui";
 
 const Soon = ({ title }) => (
@@ -19,8 +21,8 @@ export default function App() {
         <Route index element={<Overview />} />
         <Route path="themes" element={<Themes />} />
         <Route path="sentiment" element={<Sentiment />} />
-        <Route path="models" element={<Soon title="Model Comparison" />} />
-        <Route path="explorer" element={<Soon title="Feedback Explorer" />} />
+        <Route path="models" element={<Models />} />
+        <Route path="explorer" element={<Explorer />} />
         <Route path="analyze" element={<Soon title="Analyze New Feedback" />} />
       </Route>
     </Routes>
